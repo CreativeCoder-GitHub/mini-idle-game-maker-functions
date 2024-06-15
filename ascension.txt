@@ -17,7 +17,7 @@ Resources
   *prestige
     name:Prestige
     hidden when 0
-    desc:With <b>Legacy</b> bought, every 1 prestige grant +1% MpS.
+    desc:With <b>Legacy</b> bought, every 1 prestige grant +1% CpS.
 
   *heavenlyCash
     name:Heavenly Cash
