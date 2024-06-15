@@ -22,7 +22,7 @@ Resources
   *heavenlyCash
     name:Heavenly Cash
     hidden when 0
-    desc:Use this to buy special Heavenly upgrades.
+    desc:Use this to buy <b>special</b> Heavenly upgrades.
 
   *cashThisAcension
     name:Cash earned this Ascension
@@ -95,11 +95,11 @@ Buildings
 tag:losable
   *Building1
     desc:Makes 100 CpS at the start.(this number does not scale with upgrades).
-    on tick:yield 100 money
+    on tick:yield 100 cash
   
   *Building2
     desc:Makes 1 trillion CpS at the start.(this number does not scale with upgrades).
-    on tick:yield 1e12 money
+    on tick:yield 1e12 cash
 
 Achievements
   *ascend1
