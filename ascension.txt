@@ -15,7 +15,7 @@ Resources
     tag:losable
 
   *prestige
-    name:Presige
+    name:Prestige
     hidden when 0
     desc:With <b>Legacy</b> bought, every 1 prestige grant +1% MpS.
 
@@ -73,7 +73,7 @@ tag:losable
   // Of course, you could change this if you want.
   *legacyUpgr
     name:Legacy
-    desc:Gives +1% CpS for every 1 prestige you have. Also unlocks the other heavenly upgrades.
+    desc:Gives +1% CpS for every 1 prestige you have. Also unlocks other heavenly upgrades.
     on tick:multiply cash yield of :Buildings by 1 + ((prestige) / 100)
     cost:1 heavenlyCash
     // On tick gives +1% CpS for every 1 prestige you have.
@@ -102,6 +102,10 @@ tag:losable
     on tick:yield 1e12 cash
 
 Achievements
+  *cash1
+    name:Money!!!
+    desc:Make 1 million cash.
+    req:(ascensions) >= 1
   *ascend1
     name:Rebirth
     desc:Ascend at least once.
