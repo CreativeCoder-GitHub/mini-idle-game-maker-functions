@@ -87,7 +87,7 @@ tag:losable
     desc:Makes 1 trillion CpS at the start.(this number does not scale with upgrades).
     on tick:yield 1e12 money
 
-Achievments
+Achievements
   *ascend1
     name:Rebirth
     desc:Ascend at least once.
@@ -104,3 +104,7 @@ Achievments
     name:Reincarnation
     desc:Ascend <b>100 times</b>.
     req:(ascensions) >= 100
+  *ascend4
+    name:Endless cycle
+    desc:Ascend <b>1,000 times</b>.<q><i>Oh hey, it's you again.</i></q>
+    req:(ascensions) >= 1000
