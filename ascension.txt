@@ -81,7 +81,7 @@ tag:losable
 
   *acension
     name:Ascend
-    desc:Ascend to a higher state of being. You will lose all your building and non-heavenly upgrades and all your money will be converted to Prestige and Heavenly Cash.</>Ascending know will give you <b>[floor(pow(cashThisAcension/1e12, 1/3))]</b> prestige and heavenly cash. </> You need <b>[(N*N*N*1e12)-(cashThisAcension)]</b> cash for <b>+1 prestige and heavenly cash<b>.
+    desc:Ascend to a higher state of being. You will lose all your building and non-heavenly upgrades and all your money will be converted to Prestige and Heavenly Cash.</>Ascending now will give you <b>[floor(pow(cashThisAcension/1e12, 1/3))]</b> prestige and heavenly cash. </> You need <b>[(N*N*N*1e12)-(cashThisAcension)]</b> cash for <b>+1 prestige and heavenly cash<b>.
 
     on earn:
       yield (cashThisAcension) cashForfeited
@@ -106,7 +106,15 @@ Achievements
   *cash1
     name:Money!!!
     desc:Make 1 million cash.
-    req:(ascensions) >= 1
+    req:(cashThisAcension) >= 1000000
+  *cash2
+    name:A world filled with cash
+    desc:Make 100 million cash.
+    req:(cashThisAcension) >= 100000000
+  *cash3
+    name:Cash overload
+    desc:Make 10 billion cash.
+    req:(cashThisAcension) >= 10000000000
   *ascend1
     name:Rebirth
     desc:Ascend at least once.
