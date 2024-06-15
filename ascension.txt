@@ -48,6 +48,16 @@ Buttons
     no tooltip
 
 Upgrades
+  // The description is how it should work if you were to expand upon this.
+  // Of course, you could change this if you want.
+  // Make sure to define heavenly upgrades before the template tag:losable. Otherwise, players will lose heavenly upgrades after ascending.
+  *legacyUpgr
+    name:Legacy
+    desc:Gives +1% CpS for every 1 prestige you have. Also unlocks other heavenly upgrades.
+    on tick:multiply cash yield of :Buildings by 1 + ((prestige) / 100)
+    cost:1 heavenlyCash
+    // On tick gives +1% CpS for every 1 prestige you have.
+
 *TEMPLATE
 tag:losable
 
@@ -68,15 +78,6 @@ tag:losable
     name:Upgrade2.2
     desc:Multiplies efficiency of Building2 by 2.
     passive:multiply yield of Building2 by 2
-
-  // The description is how it should work if you were to expand upon this.
-  // Of course, you could change this if you want.
-  *legacyUpgr
-    name:Legacy
-    desc:Gives +1% CpS for every 1 prestige you have. Also unlocks other heavenly upgrades.
-    on tick:multiply cash yield of :Buildings by 1 + ((prestige) / 100)
-    cost:1 heavenlyCash
-    // On tick gives +1% CpS for every 1 prestige you have.
 
   *acension
     name:Ascend
