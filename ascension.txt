@@ -27,7 +27,7 @@ Resources
   *cashThisAcension
     name:Cash earned this Ascension
     desc:This is the counter of how much cash you made this acension.
-    is always:((money:earned) - cashForfeited)
+    is always:((cash:earned) - cashForfeited)
     tag:losable
 
   *cashForfeited
@@ -50,6 +50,15 @@ tag:losable
   *Upgrade2
     desc:Multiplies efficiency of Building2 by 2.
     passive:multiply yield of Building2 by 2
+
+  // The description is how it should work if you were to expand upon this.
+  // Of course, you could change this if you want.
+  *legacyUpgr
+    name:Legacy
+    desc:Gives +1% CpS for every 1 prestige you have. Also unlocks the other heavenly upgrades.
+    on tick:multiply yield of cash of :Buildings by 1+ ((prestige) / 10)
+    cost:1 heavenlyCash
+    // On tick gives +1% CpS for every 1 prestige you have.
 
   *acension
     name:Ascend
