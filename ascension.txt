@@ -1,0 +1,54 @@
+Let's make a game!
+  name:Ascension System
+  author:CreativeCoder
+  desc:A simple ascension system for Idle Game Maker. You may use with or without credit. :)
+
+Settings
+  no bulk particles
+
+Resources
+  *money
+    name:Money
+    tag:losable
+
+  *prestige
+    name:Presige
+    hidden when 0
+    desc:With <b>Legacy</b> bought, every 1 prestige grant +1% MpS.
+
+  *heavenlyMoney
+    name:Heavenly Money
+    hidden when 0
+    desc:Use this to buy special Heavenly upgrades.
+
+  *moneyThisAcension
+    name:Money earned this Ascension
+    desc:This is the counter of how much money you made this acension.
+    is always:((money:earned) - moneyForfeited)
+
+  *moneyForfeited
+    always hidden
+
+Upgrades
+*TEMPLATE
+tag:losable
+
+  *Upgrade1
+    desc:Multiplies efficiency of Building1 by 2.
+    passive:multiply yield of Building1 by 2
+  
+  *Upgrade2
+    desc:Multiplies efficiency of Building2 by 2.
+    passive:multiply yield of Building2 by 2
+
+Buildings
+*TEMPLATE
+tag:losable
+
+  *Building1
+    desc:Makes 100 MpS at the start.(this number does not scale with upgrades).
+    on tick:yield 100 money
+  
+  *Building2
+    desc:Makes 1 trillion MpS at the start.(this number does not scale with upgrades).
+    on tick:yield 1e12 money
