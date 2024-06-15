@@ -6,9 +6,12 @@ Let's make a game!
 Settings
   no bulk particles
 
+// The losable tag states that this will be reset on ascension. You can use this to clear anything you would like during ascension.
+// In this demo, cash is what is converted into heavenly resources.
+
 Resources
-  *money
-    name:Money
+  *cash
+    name:Cash
     tag:losable
 
   *prestige
@@ -16,18 +19,25 @@ Resources
     hidden when 0
     desc:With <b>Legacy</b> bought, every 1 prestige grant +1% MpS.
 
-  *heavenlyMoney
-    name:Heavenly Money
+  *heavenlyCash
+    name:Heavenly Cash
     hidden when 0
     desc:Use this to buy special Heavenly upgrades.
 
-  *moneyThisAcension
-    name:Money earned this Ascension
-    desc:This is the counter of how much money you made this acension.
-    is always:((money:earned) - moneyForfeited)
+  *cashThisAcension
+    name:Cash earned this Ascension
+    desc:This is the counter of how much cash you made this acension.
+    is always:((money:earned) - cashForfeited)
+    tag:losable
 
-  *moneyForfeited
+  *cashForfeited
     always hidden
+
+Buttons
+  *resButton
+    on click:yield 100 cash
+    class:hasFlares
+    no tooltip
 
 Upgrades
 *TEMPLATE
@@ -41,14 +51,22 @@ tag:losable
     desc:Multiplies efficiency of Building2 by 2.
     passive:multiply yield of Building2 by 2
 
+  *acension
+    name:Ascend
+    desc:Ascend to a higher state of being. You will lose all your building and non-heavenly upgrades and all your money will be converted to Prestige and Heavenly Cash.
+
+    on earn:yield (cashThisAcension) cashForfeited
+    on earn:floor(pow(cashThisAcension/1e12, 1/3)) prestige
+    on earn:floor(pow(cashThisAcension/1e12, 1/3)) heavenlyCash
+    on earn:lose tag:losable
+
 Buildings
 *TEMPLATE
 tag:losable
-
   *Building1
-    desc:Makes 100 MpS at the start.(this number does not scale with upgrades).
+    desc:Makes 100 CpS at the start.(this number does not scale with upgrades).
     on tick:yield 100 money
   
   *Building2
-    desc:Makes 1 trillion MpS at the start.(this number does not scale with upgrades).
+    desc:Makes 1 trillion CpS at the start.(this number does not scale with upgrades).
     on tick:yield 1e12 money
