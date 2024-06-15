@@ -55,6 +55,16 @@ tag:losable
     desc:Multiplies efficiency of Building2 by 2.
     passive:multiply yield of Building2 by 2
 
+  *Upgrade12
+    name:Upgrade1.2
+    desc:Multiplies efficiency of Building1 by 2.
+    passive:multiply yield of Building1 by 2
+  
+  *Upgrade22
+    name:Upgrade2.2
+    desc:Multiplies efficiency of Building2 by 2.
+    passive:multiply yield of Building2 by 2
+
   // The description is how it should work if you were to expand upon this.
   // Of course, you could change this if you want.
   *legacyUpgr
