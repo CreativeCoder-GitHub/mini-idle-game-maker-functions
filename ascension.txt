@@ -92,10 +92,6 @@ Achievements
     name:Rebirth
     desc:Ascend at least once.
     req:(ascensions) >= 1
-  *ascend1
-    name:Rebirth
-    desc:Ascend at least once.
-    req:(ascensions) >= 1
   *ascend2
     name:Resurrection
     desc:Ascend <b>10 times</b>.
