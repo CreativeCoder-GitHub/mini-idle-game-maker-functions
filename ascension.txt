@@ -56,7 +56,7 @@ tag:losable
   *legacyUpgr
     name:Legacy
     desc:Gives +1% CpS for every 1 prestige you have. Also unlocks the other heavenly upgrades.
-    on tick:multiply yield of cash of :Buildings by 1+ ((prestige) / 10)
+    on tick:multiply cash yield of :Buildings by 1 + ((prestige) / 10)
     cost:1 heavenlyCash
     // On tick gives +1% CpS for every 1 prestige you have.
 
