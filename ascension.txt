@@ -33,6 +33,10 @@ Resources
   *cashForfeited
     always hidden
 
+  *ascensions
+    name:Ascensions
+    desc:This shows how many times you have ascended while gaining one prestige. All number of ascension achievements use this number.
+
 Buttons
   *resButton
     on click:yield 100 cash
@@ -64,10 +68,13 @@ tag:losable
     name:Ascend
     desc:Ascend to a higher state of being. You will lose all your building and non-heavenly upgrades and all your money will be converted to Prestige and Heavenly Cash.
 
-    on earn:yield (cashThisAcension) cashForfeited
-    on earn:floor(pow(cashThisAcension/1e12, 1/3)) prestige
-    on earn:floor(pow(cashThisAcension/1e12, 1/3)) heavenlyCash
-    on earn:lose tag:losable
+    on earn:
+      yield (cashThisAcension) cashForfeited
+      yield floor(pow(cashThisAcension/1e12, 1/3)) prestige
+      yield floor(pow(cashThisAcension/1e12, 1/3)) heavenlyCash
+      if (floor(pow(cashThisAcension/1e12, 1/3)) > 0) yield 1 ascensions
+      lose tag:losable
+    end
 
 Buildings
 *TEMPLATE
@@ -79,3 +86,21 @@ tag:losable
   *Building2
     desc:Makes 1 trillion CpS at the start.(this number does not scale with upgrades).
     on tick:yield 1e12 money
+
+Achievments
+  *ascend1
+    name:Rebirth
+    desc:Ascend at least once.
+    req:(ascensions) >= 1
+  *ascend1
+    name:Rebirth
+    desc:Ascend at least once.
+    req:(ascensions) >= 1
+  *ascend2
+    name:Resurrection
+    desc:Ascend <b>10 times</b>.
+    req:(ascensions) >= 10
+  *ascend3
+    name:Reincarnation
+    desc:Ascend <b>100 times</b>.
+    req:(ascensions) >= 100
