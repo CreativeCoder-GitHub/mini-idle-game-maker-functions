@@ -106,5 +106,9 @@ Achievements
     req:(ascensions) >= 100
   *ascend4
     name:Endless cycle
-    desc:Ascend <b>1,000 times</b>.<q><i>Oh hey, it's you again.</i></q>
+    desc:Ascend <b>1,000 times</b>.<q><i>"Oh hey, it's you again."</i></q>
     req:(ascensions) >= 1000
+  *ascend5
+    name:The afterlife
+    desc:Ascend <b>1 million times</b>.<q><i>"At this point, most of your time is spent thinking about pressing Ascend."</i></q>
+    req:(ascensions) >= 1000000
