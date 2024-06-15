@@ -76,7 +76,7 @@ tag:losable
 
   *acension
     name:Ascend
-    desc:Ascend to a higher state of being. You will lose all your building and non-heavenly upgrades and all your money will be converted to Prestige and Heavenly Cash.
+    desc:Ascend to a higher state of being. You will lose all your building and non-heavenly upgrades and all your money will be converted to Prestige and Heavenly Cash.</>Ascending know will give you <b>[floor(pow(cashThisAcension/1e12, 1/3))]</b> prestige and heavenly cash.
 
     on earn:
       yield (cashThisAcension) cashForfeited
