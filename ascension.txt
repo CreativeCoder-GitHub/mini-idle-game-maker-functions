@@ -40,6 +40,7 @@ Resources
   // A value used in calculating remaining cash till next prestige level.
   *N
     is always:floor(1+pow(cashThisAcension/1e12, 1/3))
+    always hidden
 
 Buttons
   *resButton
